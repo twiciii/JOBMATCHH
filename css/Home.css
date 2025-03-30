@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #001f4d, #003366);
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #002a5c;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    margin-right:645px;
+    margin-top: 7px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: -35px;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    background: #ffffff20;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none; /* Removes default underline */
+    color: inherit; /* Keeps the default text color */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.profile-container:hover {
+    background: #ffffff40;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.profile-role {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 80px;
+    height: 530px;
+    background: #f5f5f5;
+    padding: 20px 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar ul li {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.sidebar ul li img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.sidebar ul li:hover {
+    background: #e0e0e0;
+}
+/* pinaka Feed */
+.feed {
+    flex: 1;
+    margin-left: 130px;
+    max-width: 800px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-box {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-box input {
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.post-box button {
+    background: #002a5c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.post {
+    background: white;
+    color: black;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-actions {
+    margin-top: 10px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobMatch</title>
+    <link rel="stylesheet" href="/css/settings.css">
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="profile">
+            <span>Tracy Veloria</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><i class="fas fa-home"></i> Home</li>
+                <li><i class="fas fa-user-friends"></i> Connections</li>
+                <li><i class="fas fa-briefcase"></i> Jobs</li>
+                <li><i class="fas fa-envelope"></i> Messages</li>
+                <li class="active"><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Settings Page -->
+        <main class="settings">
+            <h2>Settings</h2>
+
+            <section class="settings-section">
+                <h3>Profile Settings</h3>
+                <label>Full Name</label>
+                <input type="text" placeholder="Tracy Veloria">
+                <label>Email</label>
+                <input type="email" placeholder="tracy@example.com">
+                <label>Password</label>
+                <input type="password" placeholder="********">
+                <button>Save Changes</button>
+            </section>
+
+            <section class="settings-section">
+                <h3>Notifications</h3>
+                <label><input type="checkbox" checked> Email Notifications</label>
+                <label><input type="checkbox" checked> Job Alerts</label>
+                <button>Update Preferences</button>
+            </section>
+
+            <section class="settings-section">
+                <h3>Account</h3>
+                <button class="danger">Deactivate Account</button>
+                <button class="danger">Delete Account</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

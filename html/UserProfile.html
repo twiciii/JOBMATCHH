@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobMatch</title>
+    <link rel="stylesheet" href="/css/UserProfile.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul>
+            <div class="logo">LOGO</div>
+            <li><a href="Home.html"><img src="/images/Home.png" alt="Home"></a></li>
+            <li><a href="Chats.html"><img src="/images/Messages.png" alt="Chats"></a></li>
+            <li><img src="/images/Addfriend.png" alt="AddFriend"></li>
+            <li><img src="/images/Applicants.png" alt="Applicants"></li>
+            <li><img src="/images/Companies.png" alt="Companies"></li>
+            <li><img src="/images/History.png" alt="History"></li>
+        </ul>
+    </aside>
+    
+    <div class="main-container">
+        
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button class="search-btn">
+                    <img src="/images/Search.png" alt="Search">
+                </button>
+            </div>
+        </header>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-header">
+                <img src="/images/Profile.png" alt="Profile Picture" class="profile-pic">
+                <div class="profile-info">
+                    <h2>Tracy Veloria</h2>
+                    <p>Job Seeker</p>
+                </div>
+            </div>
+<a href="EditProfile.html" class="edit-profile-btn">Edit Profile</a>
+
+
+            <!-- Tabs Section -->
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('posts')">Posts</button>
+                <button class="tab" onclick="showTab('friends')">Friends</button>
+                <button class="tab" onclick="showTab('portfolio')">Portfolio</button>
+            </div>
+
+            <div class="skills">
+                <h3>Skills and Interests</h3>
+                <span>Tech Savvy</span>
+                <span>Time Management</span>
+                <span>Web Development</span>
+            </div>
+
+            <!-- Posts Section -->
+            <div class="content" id="posts">
+                <div class="post">
+                    <h4>Tracy Veloria</h4>
+                    <p>I'm an experienced senior developer, looking for a web developer position.</p>
+                    <div class="actions">
+                        <button>👍 Like</button>
+                        <button>💬 Comment</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friends Section -->
+            <div class="content hidden" id="friends">
+                <h3>Friends List</h3>
+                <div class="friend-list">
+                    <div class="friend">
+                        <img src="/images/Profile.png" alt="Profile Picture" class="friend-pic">
+                        <p>Juan dela Cruz</p>
+                    </div>
+                    <div class="friend">
+                        <img src="/images/Profile.png" alt="Profile Picture" class="friend-pic">
+                        <p>Tracy Veloria</p>
+                    </div>
+                    <div class="friend">
+                        <img src="/images/Profile.png" alt="Profile Picture" class="friend-pic">
+                        <p>William Smith</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div class="content hidden" id="portfolio">
+                <h3>Portfolio</h3>
+                <div class="portfolio-list">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="/images/Frame.png" alt="Portfolio Image">
+                        </div>
+                        <div class="portfolio-info">
+                            <p>My First Inventory System Website</p>
+                            <a href="#">Link</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="/images/Frame.png" alt="Portfolio Image">
+                        </div>
+                        <div class="portfolio-info">
+                            <p>My First Inventory System Website</p>
+                            <a href="#">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End of Profile Section -->
+
+    </div> <!-- End of Main Container -->
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.content').forEach(content => content.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
