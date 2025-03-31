@@ -11,7 +11,7 @@ body {
     color: white;
 }
 .header {
-    background-color: #0b2d56; /* Dark Blue Color */
+    background-color: #0b2d56;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ body {
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: #fff; /* White background */
+    background-color: #fff;
     border-radius: 20px;
     padding: 5px 10px;
     width: 300px;
@@ -54,6 +54,47 @@ body {
 .search-btn img {
     width: 18px;
     height: 18px;
+}
+
+.bi-house,
+.bi-chat-dots,
+.bi-person-plus,
+.bi-briefcase,
+.bi-building,
+.bi-person-check,
+.bi-building-check {
+    font-size: 30px;
+    width: 40px;  
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; 
+    transition: all 0.3s ease;
+    color: rgb(0, 0, 0);
+
+
+.bi-house:hover,
+.bi-chat-dots:hover,
+.bi-person-plus:hover,
+.bi-briefcase:hover,
+.bi-building:hover,
+.bi-person-check:hover,
+.bi-building-check:hover {
+    background-color: #e0e0e0;
+    color: #003366; 
+}
+
+
+.bi-house:active,
+.bi-chat-dots:active,
+.bi-person-plus:active,
+.bi-briefcase:active,
+.bi-building:active,
+.bi-person-check:active,
+.bi-building-check:active {
+    background-color: #e0e0e0;
+    color: #e0e0e0; 
 }
 
 
@@ -111,7 +152,7 @@ body {
 .main-container {
     flex: 1;
     padding: 30px;
-    margin-left: 120px; /* Adjust this to ensure it's not overlapped */
+    margin-left: 120px;
 }
 
 /* Profile */

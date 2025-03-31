@@ -9,32 +9,184 @@ body {
     height: 100vh;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 31, 63, 0.9);
+    z-index: 1000;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 150px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: -35px;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    background: #ffffff20;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s;
+    position: relative;
+    right: -1145px;
+}
+
+.profile-container:hover {
+    background: #ffffff40;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.profile-role {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
 /* Sidebar */
 .sidebar {
-    width: 70px;
-    background: #ffffff;
+    width: 80px;
+    height: 490px;
+    background: #f5f5f5;
+    padding: 20px 0;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 0;
-    gap: 20px;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+.sidebar .logo {
+    margin-bottom: 30px;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
-.sidebar-nav {
+.sidebar ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
-.sidebar-nav a {
-    font-size: 1.5rem;
-    color: #000;
-    text-decoration: none;
+.sidebar ul li {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.sidebar ul li img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.sidebar ul li:hover {
+    background: #e0e0e0;
+}
+
+.sidebar ul li.active {
+    background: #ddd;
+}
+
+.bi-house,
+.bi-chat-dots,
+.bi-person-plus,
+.bi-briefcase,
+.bi-building,
+.bi-person-check,
+.bi-building-check {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: rgb(0, 0, 0);
+}
+
+.bi-house:hover,
+.bi-chat-dots:hover,
+.bi-person-plus:hover,
+.bi-briefcase:hover,
+.bi-building:hover,
+.bi-person-check:hover,
+.bi-building-check:hover {
+    background-color: #e0e0e0;
+    color: #003366;
+}
+
+.bi-house:active,
+.bi-chat-dots:active,
+.bi-person-plus:active,
+.bi-briefcase:active,
+.bi-building:active,
+.bi-person-check:active,
+.bi-building-check:active {
+    background-color: #e0e0e0;
+    color: #e0e0e0;
 }
 
 /* Main area */
@@ -42,34 +194,9 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-/* Topbar */
-.topbar {
-    background: #e6e6e6;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.searchbar {
-    display: flex;
-    align-items: center;
-}
-
-.searchbar input {
-    padding: 5px 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-.searchbar button {
-    background: none;
-    border: none;
-    margin-left: 5px;
-    cursor: pointer;
+    margin-left: 100px;
+    margin-top: 70px;
+    height: calc(100vh - 70px);
 }
 
 /* Friends Section */
@@ -78,6 +205,10 @@ body {
     padding: 30px;
     margin: 30px;
     border-radius: 10px;
+    width: 80%;
+    height: 445px;
+    position: fixed;
+    top: 71px;
 }
 
 .friends-section h2 {

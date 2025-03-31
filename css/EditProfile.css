@@ -21,7 +21,7 @@ body {
     align-items: center;
     position: fixed;
     left: 20px;
-    bottom: 20px;
+    bottom: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom:20px;
 }
@@ -82,7 +82,8 @@ body {
     align-items: center;
     flex-grow: 1;
     justify-content: center;
-    margin-right:710px;
+    position: fixed;
+    left: 145px;
 }
 
 .searchbar input {
@@ -136,7 +137,45 @@ body {
     flex-direction: column;
     gap: 15px;
 }
+.bi-house,
+.bi-chat-dots,
+.bi-person-plus,
+.bi-briefcase,
+.bi-building,
+.bi-person-check,
+.bi-building-check {
+    font-size: 30px;
+    width: 40px;  
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: rgb(0, 0, 0);
+}
 
+.bi-house:hover,
+.bi-chat-dots:hover,
+.bi-person-plus:hover,
+.bi-briefcase:hover,
+.bi-building:hover,
+.bi-person-check:hover,
+.bi-building-check:hover {
+    background-color: #e0e0e0;
+    color: #003366;
+}
+
+.bi-house:active,
+.bi-chat-dots:active,
+.bi-person-plus:active,
+.bi-briefcase:active,
+.bi-building:active,
+.bi-person-check:active,
+.bi-building-check:active {
+    background-color: #e0e0e0;
+    color: #e0e0e0;
+}
 .form-group {
     display: flex;
     gap: 20px;

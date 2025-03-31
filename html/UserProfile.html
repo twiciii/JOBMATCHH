@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobMatch</title>
     <link rel="stylesheet" href="/css/UserProfile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
@@ -12,13 +13,22 @@
     <aside class="sidebar">
         <ul>
             <div class="logo">LOGO</div>
-            <li><a href="Home.html"><img src="/images/Home.png" alt="Home"></a></li>
-            <li><a href="Chats.html"><img src="/images/Messages.png" alt="Chats"></a></li>
-            <li><img src="/images/Addfriend.png" alt="AddFriend"></li>
-            <li><img src="/images/Applicants.png" alt="Applicants"></li>
-            <li><img src="/images/Companies.png" alt="Companies"></li>
-            <li><img src="/images/History.png" alt="History"></li>
-        </ul>
+            <a href="Home.html">
+                <i class="bi bi-house"></i>
+            </a>
+            <a href="Chats.html">
+            <i class="bi bi-chat-dots"></i>
+        </a>
+            <a href="addfriend.html">
+            <i class="bi bi-person-plus"></i>
+            <a href="Applicants.html">
+            <i class="bi bi-briefcase"></i>
+            <a href="Companies.html">
+            <i class="bi bi-building"></i>
+            <a href="EmployeeMarked.html">
+            <i class="bi bi-person-check"></i>
+            <a href="CompaniesMarked.html">
+            <i class="bi bi-building-check"></i>
     </aside>
     
     <div class="main-container">
@@ -115,9 +125,9 @@
                 </div>
             </div>
 
-        </div> <!-- End of Profile Section -->
+        </div>
 
-    </div> <!-- End of Main Container -->
+    </div> 
 
     <script>
         function showTab(tabId) {

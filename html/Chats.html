@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobMatch</title>
     <link rel="stylesheet" href="/css/Chats.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <!-- Header -->
     <header>
         <div class="search-bar">
             <input type="text" placeholder="Search...">
@@ -17,34 +17,46 @@
                 <img src="/images/Search.png" alt="Search">
             </button>
         </div>
-        <a href="UserProfile.html" class="profile-container">
-            <img src="/images/Profile.png" alt="Profile Picture" class="profile-img">
-            <div class="profile-info">
-                <span class="profile-name">Tracy Veloria</span>
-                <span class="profile-role">Job Seeker</span>
-            </div>
-        </a>
+        <!-- Profile -->
+    <a href="UserProfile.html" class="profile-container">
+    <img src="/images/Profile.png" alt="Profile Picture" class="profile-img">
+    <div class="profile-info">
+        <span class="profile-name">Tracy Veloria</span>
+        <span class="profile-role">Job Seeker</span>
+    </div>
+    </a>
+    
     </header>
 
     <div class="container">
-        <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="logo">LOGO</div>
-            <nav>
-                <ul>
-                    <li><a href="Home.html"><img src="/images/Home.png" alt="Home"></a></li>
-                    <li><a href="Chats.html"><img src="/images/Messages.png" alt="Chats"></a></li>
-                    <li><img src="/images/Addfriend.png" alt="Add Friend"></li>
-                    <li><img src="/images/Applicants.png" alt="Applicants"></li>
-                    <li><img src="/images/Companies.png" alt="Companies"></li>
-                    <li><img src="/images/History.png" alt="History"></li>
-                </ul>
-            </nav>
+            <ul>
+                <div class="logo">LOGO</div>
+                <a href="Home.html">
+                    <i class="bi bi-house"></i>
+                </a>
+                <a href="Chats.html">
+                    <i class="bi bi-chat-dots"></i>
+                </a>
+                <a href="addfriend.html">
+                    <i class="bi bi-person-plus"></i>
+                </a>
+                <a href="Applicants.html">
+                    <i class="bi bi-briefcase"></i>
+                </a>
+                <a href="Companies.html">
+                    <i class="bi bi-building"></i>
+                </a>
+                <a href="EmployeeMarked.html">
+                    <i class="bi bi-person-check"></i>
+                </a>
+                <a href="CompaniesMarked.html">
+                    <i class="bi bi-building-check"></i>
+                </a>
+            </ul>
         </aside>
 
-        <!-- Chat Section -->
         <div class="chat-container">
-            <!-- Chat List -->
             <div class="chat-list">
                 <h2>Messages</h2>
                 <div class="chat-item active">
@@ -63,7 +75,6 @@
                 </div>
             </div>
 
-            <!-- Chat Window -->
             <div class="chat-window">
                 <h2>Juan dela cruz</h2>
                 <div class="chat-messages">
