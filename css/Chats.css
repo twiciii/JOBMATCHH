@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,8 +27,8 @@ header {
 .search-bar {
     display: flex;
     align-items: center;
-    margin-right: 645px;
-    margin-top: 7px;
+    margin-left: 110px;
+    margin-top: 10px;
 }
 
 .search-bar input {
@@ -51,6 +52,7 @@ header {
     height: 20px;
 }
 
+/* Profile */
 .profile-container {
     display: flex;
     align-items: center;
@@ -61,6 +63,7 @@ header {
     text-decoration: none;
     color: inherit;
     transition: background 0.3s;
+    margin-right: 40px;
 }
 
 .profile-container:hover {
@@ -89,51 +92,7 @@ header {
     opacity: 0.8;
 }
 
-.container {
-    display: flex;
-    margin: 20px;
-}
-
-.bi-house,
-.bi-chat-dots,
-.bi-person-plus,
-.bi-briefcase,
-.bi-building,
-.bi-person-check,
-.bi-building-check {
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    color: rgb(0, 0, 0);
-}
-
-.bi-house:hover,
-.bi-chat-dots:hover,
-.bi-person-plus:hover,
-.bi-briefcase:hover,
-.bi-building:hover,
-.bi-person-check:hover,
-.bi-building-check:hover {
-    background-color: #e0e0e0;
-    color: #003366;
-}
-
-.bi-house:active,
-.bi-chat-dots:active,
-.bi-person-plus:active,
-.bi-briefcase:active,
-.bi-building:active,
-.bi-person-check:active,
-.bi-building-check:active {
-    background-color: #e0e0e0;
-    color: #e0e0e0;
-}
-
+/* Sidebar */
 .sidebar {
     width: 80px;
     height: 490px;
@@ -195,6 +154,7 @@ header {
     height: calc(100vh - 70px);
 }
 
+
 .chat-list {
     width: 300px;
     background: white;
@@ -216,46 +176,35 @@ header {
     color: #003366;
 }
 
-.chat-item {
+.chat-list-item {
     display: flex;
     align-items: center;
     padding: 12px;
+    margin-bottom: 12px;
     border-radius: 10px;
-    transition: background 0.3s;
     cursor: pointer;
-    margin-bottom: 10px;
+    transition: background 0.3s, box-shadow 0.3s;
+    color: black;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.chat-item:hover {
-    background: #f0f0f0;
+.chat-list-item:hover {
+    background: #e0e0e0;
+    color: #003366;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.chat-item img {
-    width: 50px;
-    height: 50px;
+.chat-list-item.active {
+    background: #ddd;
+    font-weight: bold;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.chat-user-img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     margin-right: 10px;
-}
-
-.chat-info {
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-}
-
-.chat-name {
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.chat-preview {
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-}
-
-.chat-item.active,
-.chat-item:hover {
-    background: #0055aa;
 }
 
 .chat-window {
@@ -273,10 +222,27 @@ header {
     height: 70vh;
 }
 
-.chat-window h2 {
+.chat-profile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    text-align: center;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.chat-profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-profile-name {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .chat-messages {
@@ -285,31 +251,38 @@ header {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    max-height: 500px;
 }
 
+/* Chat Messages */
 .message {
     padding: 10px;
     border-radius: 10px;
     margin: 5px 0;
     max-width: 70%;
     font-size: 16px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .received {
     background: #ddd;
     align-self: flex-start;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .sent {
     background: #007bff;
     color: white;
     align-self: flex-end;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Chat Input */
 .chat-input {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ddd;
+    align-items: center;
 }
 
 .chat-input input {
@@ -331,4 +304,58 @@ header {
 .send-btn img {
     width: 30px;
     height: 30px;
+}
+
+.image-upload-label {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.chat-image {
+    max-width: 200px;
+    border-radius: 10px;
+    align-self: flex-end;
+    margin: 5px 0;
+}
+.bi-house,
+.bi-chat-dots,
+.bi-person-plus,
+.bi-briefcase,
+.bi-building,
+.bi-person-check,
+.bi-building-check {
+    font-size: 30px;
+    width: 40px;  
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: rgb(0, 0, 0);
+}
+
+.bi-house:hover,
+.bi-chat-dots:hover,
+.bi-person-plus:hover,
+.bi-briefcase:hover,
+.bi-building:hover,
+.bi-person-check:hover,
+.bi-building-check:hover {
+    background-color: #e0e0e0;
+    color: #003366;
+}
+
+.bi-house:active,
+.bi-chat-dots:active,
+.bi-person-plus:active,
+.bi-briefcase:active,
+.bi-building:active,
+.bi-person-check:active,
+.bi-building-check:active {
+    background-color: #e0e0e0;
+    color: #e0e0e0;
 }

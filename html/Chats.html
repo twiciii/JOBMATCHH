@@ -17,79 +17,69 @@
                 <img src="/images/Search.png" alt="Search">
             </button>
         </div>
-        <!-- Profile -->
-    <a href="UserProfile.html" class="profile-container">
-    <img src="/images/Profile.png" alt="Profile Picture" class="profile-img">
-    <div class="profile-info">
-        <span class="profile-name">Tracy Veloria</span>
-        <span class="profile-role">Job Seeker</span>
-    </div>
-    </a>
-    
+        <a href="UserProfile.html" class="profile-container">
+            <img src="/images/Profile.png" alt="Profile Picture" class="profile-img">
+            <div class="profile-info">
+                <span class="profile-name">Tracy Veloria</span>
+                <span class="profile-role">Job Seeker</span>
+            </div>
+        </a>
     </header>
 
     <div class="container">
         <aside class="sidebar">
             <ul>
                 <div class="logo">LOGO</div>
-                <a href="Home.html">
-                    <i class="bi bi-house"></i>
-                </a>
-                <a href="Chats.html">
-                    <i class="bi bi-chat-dots"></i>
-                </a>
-                <a href="addfriend.html">
-                    <i class="bi bi-person-plus"></i>
-                </a>
-                <a href="Applicants.html">
-                    <i class="bi bi-briefcase"></i>
-                </a>
-                <a href="Companies.html">
-                    <i class="bi bi-building"></i>
-                </a>
-                <a href="EmployeeMarked.html">
-                    <i class="bi bi-person-check"></i>
-                </a>
-                <a href="CompaniesMarked.html">
-                    <i class="bi bi-building-check"></i>
-                </a>
+                <a href="Home.html"><i class="bi bi-house"></i></a>
+                <a href="Chats.html"><i class="bi bi-chat-dots"></i></a>
+                <a href="addfriend.html"><i class="bi bi-person-plus"></i></a>
+                <a href="Applicants.html"><i class="bi bi-briefcase"></i></a>
+                <a href="Companies.html"><i class="bi bi-building"></i></a>
+                <a href="EmployeeMarked.html"><i class="bi bi-person-check"></i></a>
+                <a href="CompaniesMarked.html"><i class="bi bi-building-check"></i></a>
             </ul>
         </aside>
 
         <div class="chat-container">
             <div class="chat-list">
                 <h2>Messages</h2>
-                <div class="chat-item active">
-                    <img src="/images/Profile.png" alt="Profile">
-                    <div class="chat-info">
-                        <span class="chat-name">Juan dela cruz</span>
-                        <span class="chat-preview">Message</span>
+                <div id="chat-list-items">
+                    <div class="chat-list-item active" data-user="Tracy Veloria">
+                        <img src="/images/Profile.png" alt="User1" class="chat-user-img">
+                        <span class="chat-user-name">Tracy Veloria</span>
                     </div>
-                </div>
-                <div class="chat-item">
-                    <img src="/images/Profile.png" alt="Profile">
-                    <div class="chat-info">
-                        <span class="chat-name">Juan dela cruz</span>
-                        <span class="chat-preview">Message</span>
+                    <div class="chat-list-item" data-user="Jane Smith">
+                        <img src="/images/Profile.png" alt="User2" class="chat-user-img">
+                        <span class="chat-user-name">Jane Smith</span>
+                    </div>
+                    <div class="chat-list-item" data-user="Mike Johnson">
+                        <img src="/images/Profile.png" alt="User3" class="chat-user-img">
+                        <span class="chat-user-name">Mike Johnson</span>
                     </div>
                 </div>
             </div>
 
             <div class="chat-window">
-                <h2>Juan dela cruz</h2>
-                <div class="chat-messages">
-                    <div class="message received">Hello!</div>
-                    <div class="message sent">Hi there!</div>
+                <div class="chat-profile">
+                    <img src="/images/Profile.png" alt="Selected User" class="chat-profile-img">
+                    <span class="chat-profile-name">Tracy Veloria</span>
                 </div>
+                <div class="chat-messages" id="chat-messages"></div>
                 <div class="chat-input">
-                    <input type="text" placeholder="Type a message...">
-                    <button class="send-btn">
+                    <input type="text" id="message-input" placeholder="Type a message...">
+                    <label for="image-upload" class="image-upload-label">
+                        <i class="bi bi-image"></i>
+                    </label>
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    <button class="send-btn" id="send-btn">
                         <img src="/images/Send.png" alt="Send">
                     </button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="/js/Chats.js"></script>
 </body>
 
 </html>

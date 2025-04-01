@@ -17,22 +17,27 @@
                 <i class="bi bi-house"></i>
             </a>
             <a href="Chats.html">
-            <i class="bi bi-chat-dots"></i>
-        </a>
+                <i class="bi bi-chat-dots"></i>
+            </a>
             <a href="addfriend.html">
-            <i class="bi bi-person-plus"></i>
+                <i class="bi bi-person-plus"></i>
+            </a>
             <a href="Applicants.html">
-            <i class="bi bi-briefcase"></i>
+                <i class="bi bi-briefcase"></i>
+            </a>
             <a href="Companies.html">
-            <i class="bi bi-building"></i>
+                <i class="bi bi-building"></i>
+            </a>
             <a href="EmployeeMarked.html">
-            <i class="bi bi-person-check"></i>
+                <i class="bi bi-person-check"></i>
+            </a>
             <a href="CompaniesMarked.html">
-            <i class="bi bi-building-check"></i>
+                <i class="bi bi-building-check"></i>
+            </a>
+        </ul>
     </aside>
     
     <div class="main-container">
-        
         <header class="header">
             <div class="search-bar">
                 <input type="text" placeholder="Search...">
@@ -51,14 +56,13 @@
                     <p>Job Seeker</p>
                 </div>
             </div>
-<a href="EditProfile.html" class="edit-profile-btn">Edit Profile</a>
-
+            <a href="EditProfile.html" class="edit-profile-btn">Edit Profile</a>
 
             <!-- Tabs Section -->
             <div class="tabs">
-                <button class="tab active" onclick="showTab('posts')">Posts</button>
-                <button class="tab" onclick="showTab('friends')">Friends</button>
-                <button class="tab" onclick="showTab('portfolio')">Portfolio</button>
+                <button class="tab active" onclick="showTab(event, 'posts')">Posts</button>
+                <button class="tab" onclick="showTab(event, 'friends')">Friends</button>
+                <button class="tab" onclick="showTab(event, 'portfolio')">Portfolio</button>
             </div>
 
             <div class="skills">
@@ -112,32 +116,12 @@
                             <a href="#">Link</a>
                         </div>
                     </div>
-
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <img src="/images/Frame.png" alt="Portfolio Image">
-                        </div>
-                        <div class="portfolio-info">
-                            <p>My First Inventory System Website</p>
-                            <a href="#">Link</a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
         </div>
-
     </div> 
 
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.content').forEach(content => content.classList.add('hidden'));
-            document.getElementById(tabId).classList.remove('hidden');
-
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-        }
-    </script>
-
-    </body>
+    <script src="/js/UserProfile.js"></script>
+</body>
 </html>
