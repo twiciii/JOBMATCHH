@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Function to save applicant data before navigating
 function saveApplicantData(event, name, role, skills, image, post) {
-    event.preventDefault(); // Prevent default navigation
+    event.preventDefault();
 
     const applicantData = {
         name: name,
         role: role,
-        skills: skills.split(","), // Convert skills string into an array
+        skills: skills.split(","),
         image: image,
         post: post
     };

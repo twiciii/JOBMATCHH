@@ -189,7 +189,6 @@ header {
     color: #e0e0e0;
 }
 
-/* Main area */
 .main {
     flex: 1;
     display: flex;
@@ -200,7 +199,6 @@ header {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Friends Section */
 .friends-section {
     background: #e6e6e6;
     padding: 30px;
@@ -217,7 +215,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Friend List */
 .friends-list {
     display: flex;
     flex-direction: column;
@@ -247,7 +244,6 @@ header {
     cursor: pointer;
 }
 
-/* Add Friend */
 .add-friend {
     display: flex;
     gap: 10px;
