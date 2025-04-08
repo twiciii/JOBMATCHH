@@ -405,9 +405,7 @@ header {
 .modal-content a:hover {
     text-decoration: underline;
 }
-.bi-house,
-.bi-briefcase,
-.bi-building {
+.bi {
     font-size: 30px;
     width: 40px;  
     height: 40px;
@@ -417,18 +415,4 @@ header {
     border-radius: 5px;
     transition: all 0.3s ease;
     color: rgb(0, 0, 0);
-}
-
-.bi-house:hover,
-.bi-briefcase:hover,
-.bi-building:hover  {
-    background-color: #e0e0e0;
-    color: #003366;
-}
-
-.bi-house:active,
-.bi-briefcase:active,
-.bi-building:active {
-    background-color: #e0e0e0;
-    color: #e0e0e0;
 }
