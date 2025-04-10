@@ -124,15 +124,9 @@ header {
     margin: 20px;
 }
 
-.bi-house,
-.bi-chat-dots,
-.bi-person-plus,
-.bi-briefcase,
-.bi-building,
-.bi-person-check,
-.bi-building-check {
+.bi {
     font-size: 30px;
-    width: 40px;
+    width: 40px;  
     height: 40px;
     display: inline-flex;
     align-items: center;
@@ -142,26 +136,18 @@ header {
     color: rgb(0, 0, 0);
 }
 
-.bi-house:hover,
-.bi-chat-dots:hover,
-.bi-person-plus:hover,
-.bi-briefcase:hover,
-.bi-building:hover,
-.bi-person-check:hover,
-.bi-building-check:hover {
+.bi:hover {
     background-color: #e0e0e0;
     color: #003366;
 }
 
-.bi-house:active,
-.bi-chat-dots:active,
-.bi-person-plus:active,
-.bi-briefcase:active,
-.bi-building:active,
-.bi-person-check:active,
-.bi-building-check:active {
+.sidebar-icon:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+.sidebar-icon.active {
     background-color: #e0e0e0;
-    color: #e0e0e0;
+    border-radius: 5px;
 }
 /* Sidebar */
 .sidebar {
@@ -192,27 +178,6 @@ header {
     align-items: center;
     gap: 20px;
 }
-
-.sidebar ul li {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s;
-}
-
-.sidebar ul li img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-}
-
-.sidebar ul li:hover {
-    background: #e0e0e0;
-}
-
 .developer-list {
     background: white;
     border-radius: 10px;
@@ -228,10 +193,6 @@ header {
     height: 80vh;
     overflow-y: auto;
 }
-
-
-
-
 /* Developer Card */
 .developer-card {
     display: flex;

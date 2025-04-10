@@ -96,3 +96,4 @@ document.getElementById("post-button").addEventListener("click", function () {
     document.getElementById("post-image").value = "";
     document.getElementById("image-preview-container").style.display = "none";
 });
+
