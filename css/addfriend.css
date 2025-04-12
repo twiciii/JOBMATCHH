@@ -235,11 +235,6 @@ width: 145vh;
 
 .friend-request-btn {
     background-color: #e0e0e0;
-    color: rgb(0, 0, 0)!important;
-}
-
-.friend-request-btn {
-    background-color: #e0e0e0;
     color: rgb(0, 0, 0);
 }
 
@@ -249,13 +244,13 @@ width: 145vh;
 }
 
 .friend-request-btn.active {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #003366;
+    color: rgb(255, 255, 255);
 }
 
 .add-friend-btn.active {
-    background-color: var(--primary-color);
-    color: #333;
+    background-color: #003366;
+    color: rgb(255, 255, 255) !important;
 }
 
 .search-container {
