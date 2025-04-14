@@ -1,0 +1,66 @@
+.message-tab,
+.friends-tab,
+.job-seeker-tab,
+.companies-tab,
+.bookmark-tab,
+.user-profile-container,
+.friends-userprofile { /* Initially hide friends-userprofile */
+    display: none;
+}
+
+.side-nav-item.active {
+    background-color: #e4ac1e;
+    font-weight: bold;
+}
+
+.friend-activity > div {
+    display: none;
+}
+
+.friend-activity > .friend-request-list {
+    display: block;
+}
+
+.btn-friend-request.active,
+.btn-add-request.active {
+    background-color: #003366;
+    color: white;
+}
+
+.side-nav {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.side-nav.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    display: none;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.notification-dropdown.show {
+    display: block;
+}
+
+.notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.active-profile-tab {
+    /* You can add other styles for the active tab here if needed */
+}
