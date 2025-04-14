@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>JobMatch</title>
+    <link rel="stylesheet" href="/css/Applicantsaddfriend.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Profile -->
+    <a href="ApplicantsProfile.html" class="profile-container">
+        <img src="/images/Profile.png" alt="Profile Picture" class="profile-img">
+        <div class="profile-info">
+            <span class="profile-name">Tracy Veloria</span>
+            <span class="profile-role">Job Seeker</span>
+        </div>
+        </a>
+
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/images/logo.jpg" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="name">JobMatch</span>
+                </div>
+            </div>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-bar">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="Search...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="/html/ApplicantsHome.html">
+                            <i class="bi bi-house"></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/html/ApplicantsChats.html">
+                            <i class="bi bi-chat"></i>
+                            <span class="text nav-text">Chats</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/html/Applicantsaddfriend.html">
+                            <i class="bi bi-person-plus"></i>
+                            <span class="text nav-text">Friends</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="/html/Companies.html">
+                            <i class="bi bi-building"></i>
+                            <span class="text nav-text">Companies</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span class="text nav-text">Log Out</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="friends-container">
+            <div class="friends-header">
+                <h2>Friends</h2>
+                <div class="friends-buttons">
+                    <button class="friend-request-btn" id="requestBtn">Friend Request</button>
+                    <button class="add-friend-btn" id="friendsBtn">Add Friend</button>
+                </div>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Enter Username">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <!-- Friends List Section -->
+            <div class="friends-list active" id="friendsList">
+                <div class="friend-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">Marc Kenneth Malapo</div>
+                            <div class="friend-role">UI/UX Programmer | Quezon City</div>
+                        </div>
+                    </div>
+                    <button class="add-friend-action">ADD FRIEND</button>
+                </div>
+                <div class="friend-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">Marc Kenneth Malapo</div>
+                            <div class="friend-role">Programmer | Cebu City</div>
+                        </div>
+                    </div>
+                    <button class="add-friend-action">ADD FRIEND</button>
+                </div>
+                <div class="friend-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">Marc Kenneth Malapo</div>
+                            <div class="friend-role">Software Developer | Makati City</div>
+                        </div>
+                    </div>
+                    <button class="add-friend-action">ADD FRIEND</button>
+                </div>
+                <div class="friend-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">Marc Kenneth Malapo</div>
+                            <div class="friend-role">Programmer | Mindanao</div>
+                        </div>
+                    </div>
+                    <button class="add-friend-action">ADD FRIEND</button>
+                </div>
+                <div class="friend-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">Marc Kenneth Malapo</div>
+                            <div class="friend-role">Programmer | Mindanao</div>
+                        </div>
+                    </div>
+                    <button class="add-friend-action">ADD FRIEND</button>
+                </div>
+            </div>
+            <!-- Friend Requests Section -->
+            <div class="friend-requests" id="requestsList">
+                <div class="request-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">Jane Smith</div>
+                            <div class="friend-role">Frontend Developer | Manila</div>
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="accept-btn">Accept</button>
+                        <button class="decline-btn">Decline</button>
+                    </div>
+                </div>
+                <div class="request-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">John Doe</div>
+                            <div class="friend-role">Backend Developer | Davao City</div>
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="accept-btn">Accept</button>
+                        <button class="decline-btn">Decline</button>
+                    </div>
+                </div>
+                <div class="request-item">
+                    <div class="friend-info">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="friend-details">
+                            <div class="friend-name">Maria Santos</div>
+                            <div class="friend-role">Data Scientist | Iloilo City</div>
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="accept-btn">Accept</button>
+                        <button class="decline-btn">Decline</button>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollbar">
+                <div class="scroll-indicator"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/addfriend.js"></script>
+</body>
+
+</html>

@@ -7,20 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>JobMatch</title>
-    <link rel="stylesheet" href="/css/UserProfile.css">
+    <link rel="stylesheet" href="/css/CompaniesProfile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
                <!-- Profile -->
-               <a href="UserProfile.html" class="profile-container">
+               <a href="CompaniesProfile.html" class="profile-container">
                 <img src="/images/Profile.png" alt="Profile Picture" class="profile-img">
                 <div class="profile-info">
-                    <span class="profile-name">Tracy Veloria</span>
-                    <span class="profile-role">Job Seeker</span>
+                    <span class="profile-name">XYZ Tech</span>
+                    <span class="profile-role">Employer</span>
                 </div>
                 </a>
+
 <nav class="sidebar">
     <header>
     <div class="image-text">
@@ -40,19 +41,19 @@
             </li>
             <ul class="menu-links">
                 <li class="nav-links">
-                    <a href="/html/Home.html">
+                    <a href="/html/CompaniesHome.html">
                     <i class="bi bi-house"></i>
                     <span class="text nav-text">Home</span>
                     </a>
                 </li>
                 <li class="nav-links">
-                    <a href="/html/Chats.html">
+                    <a href="/html/CompaniesChats.html">
                     <i class="bi bi-chat"></i>
                     <span class="text nav-text">Chats</span>
                     </a>
                 </li>
                 <li class="nav-links">
-                    <a href="/html/addfriend.html">
+                    <a href="/html/Companiesaddfriend.html">
                     <i class="bi bi-person-plus"></i>
                     <span class="text nav-text">Friends</span>
                     </a>
@@ -61,12 +62,6 @@
                     <a href="/html/Applicants.html">
                     <i class="bi bi-briefcase"></i>
                     <span class="text nav-text">Applicants</span>
-                    </a>
-                </li>
-                <li class="nav-links">
-                    <a href="/html/Companies.html">
-                    <i class="bi bi-building"></i>
-                    <span class="text nav-text">Companies</span>
                     </a>
                 </li>
             </ul>
@@ -88,31 +83,31 @@
             <div class="profile-header">
                 <img src="/images/Profile.png" alt="Profile Picture" class="profile-pic">
                 <div class="profile-info">
-                    <h2>Tracy Veloria</h2>
-                    <p>Job Seeker</p>
+                    <h2>XYZ Tech</h2>
+                    <p>Employer</p>
                 </div>
             </div>
-            <a href="EditProfile.html" class="edit-profile-btn">Edit Profile</a>
+            <a href="CompaniesEditProfile.html" class="edit-profile-btn">Edit Profile</a>
 
             <!-- Tabs Section -->
             <div class="tabs">
                 <button class="tab active" onclick="showTab(event, 'posts')">Posts</button>
-                <button class="tab" onclick="showTab(event, 'friends')">Friends</button>
-                <button class="tab" onclick="showTab(event, 'portfolio')">Portfolio</button>
+                <button class="tab" onclick="showTab(event, 'friends')">Partners</button>
+                <button class="tab" onclick="showTab(event, 'portfolio')">Projects</button>
             </div>
 
             <div class="skills">
-                <h3>Skills and Interests</h3>
-                <span>Tech Savvy</span>
-                <span>Time Management</span>
+                <h3>Company FIeld</h3>
+                <span>TechSolutions</span>
                 <span>Web Development</span>
+                <span>Customer Service</span>
             </div>
 
             <!-- Posts Section -->
             <div class="content" id="posts">
                 <div class="post">
-                    <h4>Tracy Veloria</h4>
-                    <p>I'm an experienced senior developer, looking for a web developer position.</p>
+                    <h4>XYZ TEch</h4>
+                    <p>We just launched our latest AI-driven eCommerce platform!</p>
                     <div class="actions">
                         <button>👍 Like</button>
                         <button>💬 Comment</button>
@@ -122,19 +117,19 @@
 
             <!-- Friends Section -->
             <div class="content hidden" id="friends">
-                <h3>Friends List</h3>
+                <h3>Partners</h3>
                 <div class="friend-list">
                     <div class="friend">
                         <img src="/images/Profile.png" alt="Profile Picture" class="friend-pic">
-                        <p>Juan dela Cruz</p>
+                        <p>CloudNet Solutions</p>
                     </div>
                     <div class="friend">
                         <img src="/images/Profile.png" alt="Profile Picture" class="friend-pic">
-                        <p>Tracy Veloria</p>
+                        <p>AI Works</p>
                     </div>
                     <div class="friend">
                         <img src="/images/Profile.png" alt="Profile Picture" class="friend-pic">
-                        <p>William Smith</p>
+                        <p>ABC tech</p>
                     </div>
                 </div>
             </div>
@@ -148,8 +143,8 @@
                             <img src="/images/Frame.png" alt="Portfolio Image">
                         </div>
                         <div class="portfolio-info">
-                            <p>My First Inventory System Website</p>
-                            <a href="#">Link</a>
+                            <p>Inventory Management System for RetailChain</p>
+                            <a href="#">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -158,6 +153,6 @@
         </div>
     </div> 
 
-    <script src="/js/UserProfile.js"></script>
+    <script src="/js/ApplicantsProfile.js"></script>
 </body>
 </html>
