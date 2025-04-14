@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Job Match</title>
+  <link rel="stylesheet" href="../css/Admin.css" />
+</head>
+<body>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="header-left">
+      <img src="../images/logo1.png" alt="Logo 1" class="logo" />
+      <img src="../images/logo2.png" alt="Logo 2" class="logo" />
+      <img src="../html/images/Logo3.png" alt="Job Match Logo" class="logo" />
+    </div>
+    <div class="header-right">
+      <img src="../images/adminlogo.png" alt="Admin Icon" class="admin-icon" />
+      <span class="admin-name">ADMIN</span>
+    </div>
+  </div>
+
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="features-box">
+        <h3>Features</h3>
+        <button class="active" onclick="showSection('managePost', this)">
+          <img src="../images/manage-post.png" alt="Manage Post Icon" class="btn-icon"> Manage Post
+        </button>
+        <button onclick="showSection('manageAccount', this)">
+          <img src="../images/manage-account.png" alt="Manage Account Icon" class="btn-icon"> Manage Account
+        </button>
+        <button onclick="showSection('approveJobSeeker', this)">
+          <img src="../images/approve-jobseeker.png" alt="Approve Job Seeker Icon" class="btn-icon"> Approve Job Seeker Post
+        </button>
+        <button onclick="showSection('approveCompany', this)">
+          <img src="../images/approve-company.png" alt="Approve Company Icon" class="btn-icon"> Approve Company Post
+        </button>
+        <br>
+        <button class="logout">Log out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-content">
+      <!-- Manage Post Section -->
+      <section id="managePost" class="section active">
+        <table class="post-table">
+          <tr>
+            <td><strong>Jen Cabutin</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Web Developer</td>
+                  <td>Makati City</td>
+                  <td>2 Years Experience</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+
+        <table class="post-table">
+          <tr>
+            <td><strong>Marc Malapot</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>UI/UX Programmer</td>
+                  <td>Quezon City</td>
+                  <td>1 Year Experience</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+
+        <!--Table-->
+        <table class="post-table">
+          <tr>
+            <td><strong>Ysa Zimon</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Frontend Developer</td>
+                  <td>Manila City</td>
+                  <td>3 Years Experience</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+        
+      </section>
+
+      <!-- Manage Account Section -->
+      <section id="manageAccount" class="section">
+        <div class="manage-container">
+          <table class="post-table">
+            <tr>
+              <td><strong>Coleen Cabalayan</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <table class="info-table">
+                  <tr>
+                    <td>Software Developer</td>
+                    <td>Caloocan City</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="button-gg">
+                <button class="approve-btn">Approve</button>
+                <button class="decline-btn">Decline</button>
+              </td>
+            </tr>
+          </table>
+
+          <table class="post-table">
+            <tr>
+              <td><strong>Cole Cabalay</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <table class="info-table">
+                  <tr>
+                    <td>Software Developer</td>
+                    <td>Valenzuela City</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="button-gg">
+                <button class="approve-btn">Approve</button>
+                <button class="decline-btn">Decline</button>
+              </td>
+            </tr>
+          </table>
+
+          <table class="post-table">
+            <tr>
+              <td><strong>Marc Lumague</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <table class="info-table">
+                  <tr>
+                    <td>Software Developer</td>
+                    <td>Mandaluyong City</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="button-gg">
+                <button class="approve-btn">Approve</button>
+                <button class="decline-btn">Decline</button>
+              </td>
+            </tr>
+          </table>
+
+          <table class="post-table">
+            <tr>
+              <td><strong>Tracy Matias</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <table class="info-table">
+                  <tr>
+                    <td>Software Developer</td>
+                    <td>Pasig City</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="button-gg">
+                <button class="approve-btn">Approve</button>
+                <button class="decline-btn">Decline</button>
+              </td>
+            </tr>
+          </table>
+
+          <table class="post-table">
+            <tr>
+              <td><strong>Colene Cabaylan</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <table class="info-table">
+                  <tr>
+                    <td>Software Developer</td>
+                    <td>Makati City</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="button-gg">
+                <button class="approve-btn">Approve</button>
+                <button class="decline-btn">Decline</button>
+              </td>
+            </tr>
+          </table>
+      </section>
+
+      <!-- Approve Job Seeker Post -->
+      <section id="approveJobSeeker" class="section">
+        <table class="post-table">
+          <tr>
+            <td><strong>Jen Cabutin</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Web Developer</td>
+                  <td>Makati City</td>
+                  <td>2 Years Experience</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="approve-btn">Approve</button>
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+
+        <table class="post-table">
+          <tr>
+            <td><strong>Jene Cabutine</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Web Developer</td>
+                  <td>Makati City</td>
+                  <td>Looking for IT Related Jobs</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="approve-btn">Approve</button>
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+
+        <table class="post-table">
+          <tr>
+            <td><strong>Ysa Cymon</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Web Developer</td>
+                  <td>Makati City</td>
+                  <td>Looking for Manila Based Onsite Work</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="approve-btn">Approve</button>
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Approve Company Post -->
+      <section id="approveCompany" class="section">
+        <table class="post-table">
+          <tr>
+            <td><strong>Lawrence Malapo</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Web Developer</td>
+                  <td>Makati City</td>
+                  <td>2 Years Experience</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="approve-btn">Approve</button>
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+
+        <table class="post-table">
+          <tr>
+            <td><strong>Jennifer Cabut</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Web Developer</td>
+                  <td>Makati City</td>
+                  <td>2 Years Experience</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="approve-btn">Approve</button>
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+
+        <table class="post-table">
+          <tr>
+            <td><strong>Jeny Cabuteen</strong></td>
+            <td class="post-time">5h ago</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <table class="info-table">
+                <tr>
+                  <td>Web Developer</td>
+                  <td>Makati City</td>
+                  <td>2 Years Experience</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-gg">
+              <button class="approve-btn">Approve</button>
+              <button class="delete-btn">Delete Post</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/Admin.js"></script>
+</body>
+</html>
