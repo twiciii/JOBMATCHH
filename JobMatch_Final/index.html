@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
@@ -9,269 +9,305 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
     />
     <script
-        type="module"
-        src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"
+      type="module"
+      src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
-        nomodule
-        src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"
+      nomodule
+      src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"
     ></script>
-    <script defer src="/JobMatch_Final/JobMatch_Final/js/script.js"></script>
-    <title>Home &mdash; JobMatch</title>
-</head>
-<body>
+    <script defer src="js/script.js"></script>
+    <title>JobMatch</title>
+  </head>
+  <body>
     <div class="container">
-        <header class="nav-container">
-            <nav class="nav-bar flex--horizontal">
-                <div class="logo-container flex--horizontal flex--gap-small">
-                    <img class="site-logo" src="/images/JOB MATCH .png" alt="site logo" />
-                    <input type="search" />
+      <header class="nav-container">
+        <nav class="nav-bar flex--horizontal">
+          <div class="logo-container flex--horizontal flex--gap-small">
+            <img
+              class="site-logo"
+              src="/images/JOB MATCH .png"
+              alt="site logo"
+            />
+            <input type="search" />
+          </div>
+          <div class="profile-container flex--horizontal flex--gap-medium">
+            <ion-icon class="btn-notif" name="notifications"></ion-icon>
+            <img class="profile-img" src="img/profile.jpg" alt="user profile" />
+            <a href="profile.html">User Name</a>
+            <div class="notification-dropdown">
+              <div class="notification-item">Notification 1</div>
+              <div class="notification-item">Notification 2</div>
+              <div class="notification-item">Notification 3</div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="content-container">
+        <aside class="side--nav-container">
+          <ion-icon class="sidebar-menu-icon" name="menu"></ion-icon>
+          <nav class="side-nav">
+            <ul class="side-nav-list flex--vertical">
+              <h2>Features</h2>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="home"
+                  ><ion-icon class="side-icon" name="home"></ion-icon
+                  ><span>Home</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="message"
+                  ><ion-icon
+                    class="side-icon"
+                    name="chatbubble-ellipses"
+                  ></ion-icon
+                  ><span>Message</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="applications"
+                  ><ion-icon class="side-icon" name="document"></ion-icon
+                  ><span>Applications</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="friends"
+                  ><ion-icon class="side-icon" name="people"></ion-icon
+                  ><span>Friends</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="job-seeker"
+                  ><ion-icon
+                    class="side-icon"
+                    name="file-tray-stacked"
+                  ></ion-icon
+                  ><span>Job Seeker</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="companies"
+                  ><ion-icon class="side-icon" name="business"></ion-icon
+                  ><span>Companies</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="bookmark"
+                  ><ion-icon class="side-icon" name="bookmark"></ion-icon
+                  ><span>Bookmark</span></a
+                >
+              </li>
+            </ul>
+            <button class="btn-logout">Logout</button>
+          </nav>
+        </aside>
+        <main class="main--content-container home-tab">
+          <div class="post-container">
+            <div class="create-post">
+              <button id="myBtn">Post a job or Content</button>
+            </div>
+            <div class="post-list">
+              <div class="post-item">
+                <h1>Company Name</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eveniet quos odio consequatur velit maxime magnam ea fugiat et
+                  quisquam pariatur animi voluptatem minima ipsa nam, aut
+                  veritatis incidunt expedita necessitatibus!
+                </p>
+                <div class="action-container">
+                  <button><ion-icon name="heart"></ion-icon>Like</button>
+                  <button>
+                    <ion-icon name="chatbox-ellipses"></ion-icon>Comment
+                  </button>
+                  <button><ion-icon name="link"></ion-icon>Apply</button>
+                  <button><ion-icon name="bookmark"></ion-icon>Bookmark</button>
                 </div>
-                <div class="profile-container flex--horizontal flex--gap-medium">
-                    <ion-icon class="btn-notif" name="notifications"></ion-icon>
-                    <img class="profile-img" src="img/profile.jpg" alt="user profile" />
-                    <a href="profile.html">User Name</a>
-                    <div class="notification-dropdown">
-                        <div class="notification-item">Notification 1</div>
-                        <div class="notification-item">Notification 2</div>
-                        <div class="notification-item">Notification 3</div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container message-tab">
+          <div class="message-container">
+            <div class="message-list">
+              <h2>Messages</h2>
+              <div class="message-list-item">
+                <img src="img/profile.jpg" alt="user profile" />
+                <p>User Name</p>
+              </div>
+            </div>
+            <div class="chatbox-container">
+              <div class="chat-profile">
+                <img src="img/profile.jpg" alt="user profile" />
+                <p>User Name</p>
+              </div>
+              <div class="chat-box"></div>
+              <div class="message-field">
+                <input type="text" placeholder="Enter your message here" />
+                <ion-icon class="btn-image" name="image"></ion-icon>
+                <ion-icon class="btn-send" name="send"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container applications-tab">
+          <div class="application-list">
+            <div class="application-item">
+              <h2>Company Name</h2>
+              <div class="job-status">
+                <div class="status-item">
+                  <button class="applied-status">✔</button>
+                  <p>Applied</p>
                 </div>
-            </nav>
-        </header>
-        <div class="content-container">
-            <aside class="side--nav-container">
-                <ion-icon class="sidebar-menu-icon" name="menu"></ion-icon>
-                <nav class="side-nav">
-                    <ul class="side-nav-list flex--vertical">
-                        <h2>Features</h2>
-                        <li>
-                            <a
-                                class="side-nav-item flex--horizontal"
-                                href="#"
-                                data-tab="home"
-                                ><ion-icon class="side-icon" name="home"></ion-icon
-                                ><span>Home</span></a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="side-nav-item flex--horizontal"
-                                href="#"
-                                data-tab="message"
-                                ><ion-icon
-                                    class="side-icon"
-                                    name="chatbubble-ellipses"
-                                ></ion-icon
-                                ><span>Message</span></a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="side-nav-item flex--horizontal"
-                                href="#"
-                                data-tab="friends"
-                                ><ion-icon class="side-icon" name="people"></ion-icon
-                                ><span>Friends</span></a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="side-nav-item flex--horizontal"
-                                href="#"
-                                data-tab="job-seeker"
-                                ><ion-icon
-                                    class="side-icon"
-                                    name="file-tray-stacked"
-                                ></ion-icon
-                                ><span>Job Seeker</span></a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="side-nav-item flex--horizontal"
-                                href="#"
-                                data-tab="companies"
-                                ><ion-icon class="side-icon" name="business"></ion-icon
-                                ><span>Companies</span></a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="side-nav-item flex--horizontal"
-                                href="#"
-                                data-tab="bookmark"
-                                ><ion-icon class="side-icon" name="bookmark"></ion-icon
-                                ><span>Bookmark</span></a
-                            >
-                        </li>
-                    </ul>
-                    <button class="btn-logout">Logout</button>
-                </nav>
-            </aside>
-            <main class="main--content-container home-tab">
-                <div class="post-container">
-                    <div class="create-post">
-                        <button id="myBtn">Post a job or Content</button>
-                    </div>
-                    <div class="post-list">
-                        <div class="post-item">
-                            <h1>Company Name</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Eveniet quos odio consequatur velit maxime magnam ea fugiat et
-                                quisquam pariatur animi voluptatem minima ipsa nam, aut
-                                veritatis incidunt expedita necessitatibus!
-                            </p>
-                            <div class="action-container">
-                                <button><ion-icon name="heart"></ion-icon>Like</button>
-                                <button>
-                                    <ion-icon name="chatbox-ellipses"></ion-icon>Comment
-                                </button>
-                                <button><ion-icon name="link"></ion-icon>Apply</button>
-                                <button><ion-icon name="bookmark"></ion-icon>Bookmark</button>
-                            </div>
-                        </div>
-                    </div>
+                <hr />
+                <div class="status-item">
+                  <button class="other-status">&nbsp;</button>
+                  <p>Under Review</p>
                 </div>
-            </main>
-            <main class="main--content-container message-tab">
-                <div class="message-container">
-                    <div class="message-list">
-                        <h2>Messages</h2>
-                        <div class="message-list-item">
-                            <img src="img/profile.jpg" alt="user profile" />
-                            <p>User Name</p>
-                        </div>
-                    </div>
-                    <div class="chatbox-container">
-                        <div class="chat-profile">
-                            <img src="img/profile.jpg" alt="user profile" />
-                            <p>User Name</p>
-                        </div>
-                        <div class="chat-box"></div>
-                        <div class="message-field">
-                            <input type="text" placeholder="Enter your message here" />
-                            <ion-icon class="btn-image" name="image"></ion-icon>
-                            <ion-icon class="btn-send" name="send"></ion-icon>
-                        </div>
-                    </div>
+                <hr />
+                <div class="status-item">
+                  <button class="other-status">&nbsp;</button>
+                  <p>Final Decision</p>
                 </div>
-            </main>
-            <main class="main--content-container friends-tab">
-                <div class="friends-container">
-                    <div class="friends-tab-nav">
-                        <h2>Friends</h2>
-                        <div class="friends-tab-item">
-                            <button class="btn-friend-request active">
-                                Friend Request
-                            </button>
-                            <button class="btn-add-request">Add Friend</button>
-                        </div>
-                    </div>
-                    <div class="friend-activity">
-                        <div class="friend-request-list">
-                            <div class="friend-list-item">
-                                <div class="friend-profile">
-                                    <img src="img/profile.jpg" />
-                                    <p>User Name</p>
-                                </div>
-                                <div class="friend-action">
-                                    <button class="btn-accept">Accept</button>
-                                    <button class="btn-remove">Remove</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="add-friend-list">
-                            <input
-                                class="search-user"
-                                type="search"
-                                placeholder="Enter Username"
-                            />
-                            <div class="add-list-item">
-                                <div class="add-profile">
-                                    <img src="img/profile.jpg" />
-                                    <div>
-                                        <p>User Name</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                            Eaque, amet est qui explicabo mollitia at ex iusto.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="add-action">
-                                    <button class="btn-accept">Accept</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container friends-tab">
+          <div class="friends-container">
+            <div class="friends-tab-nav">
+              <h2>Friends</h2>
+              <div class="friends-tab-item">
+                <button class="btn-friend-request active">
+                  Friend Request
+                </button>
+                <button class="btn-add-request">Add Friend</button>
+              </div>
+            </div>
+            <div class="friend-activity">
+              <div class="friend-request-list">
+                <div class="friend-list-item">
+                  <div class="friend-profile">
+                    <img src="img/profile.jpg" />
+                    <p>User Name</p>
+                  </div>
+                  <div class="friend-action">
+                    <button class="btn-accept">Accept</button>
+                    <button class="btn-remove">Remove</button>
+                  </div>
                 </div>
-            </main>
-            <main class="main--content-container job-seeker-tab">
-                <div class="job-post-list">
-                    <div class="job-post-item">
-                        <img src="img/profile.jpg" />
-                        <div class="job-info">
-                            <h2>User Name</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-                            <div class="status-container">
-                                <button>&nbsp;</button>
-                                <p>Status</p>
-                            </div>
-                        </div>
+              </div>
+              <div class="add-friend-list">
+                <input
+                  class="search-user"
+                  type="search"
+                  placeholder="Enter Username"
+                />
+                <div class="add-list-item">
+                  <div class="add-profile">
+                    <img src="img/profile.jpg" />
+                    <div>
+                      <p>User Name</p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eaque, amet est qui explicabo mollitia at ex iusto.
+                      </p>
                     </div>
+                  </div>
+                  <div class="add-action">
+                    <button class="btn-accept">Add Friend</button>
+                  </div>
                 </div>
-            </main>
-            <main class="main--content-container companies-tab">
-                <div class="company-post-list">
-                    <div class="company-post-item">
-                        <img src="img/profile.jpg" />
-                        <div class="company-info">
-                            <h2>Company Name</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-                            <div class="status-container">
-                                <button>&nbsp;</button>
-                                <p>Status</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container job-seeker-tab">
+          <div class="job-post-list">
+            <div class="job-post-item">
+              <img src="img/profile.jpg" />
+              <div class="job-info">
+                <h2>User Name</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                <div class="status-container">
+                  <button>&nbsp;</button>
+                  <p>Status</p>
                 </div>
-            </main>
-            <main class="main--content-container bookmark-tab">
-                <div class="bookmark-container">
-                    <h2 class="bookmark-title">Bookmark</h2>
-                    <div class="bookmark-list">
-                        <div class="bookmark-item">
-                            <h2>User/Company Name</h2>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Quod, ex nam placeat similique commodi tenetur delectus
-                                libero.
-                            </p>
-                        </div>
-                        <div class="btn-bookmark-container">
-                            <button class="btn-view">View</button>
-                            <button class="btn-remove-bk">Remove Bookmark</button>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container companies-tab">
+          <div class="company-post-list">
+            <div class="company-post-item">
+              <img src="img/profile.jpg" />
+              <div class="company-info">
+                <h2>Company Name</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                <div class="status-container">
+                  <button>&nbsp;</button>
+                  <p>Status</p>
                 </div>
-            </main>
-        </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container bookmark-tab">
+          <div class="bookmark-container">
+            <h2 class="bookmark-title">Bookmark</h2>
+            <div class="bookmark-list">
+              <div class="bookmark-item">
+                <h2>User/Company Name</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quod, ex nam placeat similique commodi tenetur delectus
+                  libero.
+                </p>
+              </div>
+              <div class="btn-bookmark-container">
+                <button class="btn-view">View</button>
+                <button class="btn-remove-bk">Remove Bookmark</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
     <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="create-post-container">
-                <h2>Create a post</h2>
-                <textarea rows="10" placeholder="What's on your mind?"></textarea>
-                <input type="file" />
-                <button>Post Now</button>
-            </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="create-post-container">
+          <h2>Create a post</h2>
+          <textarea rows="10" placeholder="What's on your mind?"></textarea>
+          <input type="file" />
+          <button>Post Now</button>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #003366;
   color: #003366;
   overflow: hidden;
@@ -71,7 +71,7 @@ body {
   color: #003366;
 }
 
-.admin-sidebar button {
+.admin-sidebar button:not(:last-child) {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -92,7 +92,8 @@ body {
   background: #ffd84d;
 }
 
-.btn-logout {
+.logout-btn {
+  margin: 10px 30px;
   background-color: red;
   border: none;
   padding: 1rem 3rem;
