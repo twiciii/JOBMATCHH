@@ -63,20 +63,7 @@ window.onclick = function (event) {
             });
 
             showTab("home");
-
-            userProfileName.addEventListener('click', (event) => {
-                event.preventDefault();
-                userProfileContainer.style.display = "block";
-                mainContentContainers.forEach(container => {
-                    container.style.display = "none";
-                });
-                // Initially show the post section and activate the post button
-                postProfileDiv.style.display = "block";
-                friendsUserProfileDiv.style.display = "none";
-                editProfileDiv.style.display = "none";
-                setActiveProfileTab("post-profile");
-            });
-
+            
             function setActiveProfileTab(tabName) {
                 profileTabButtons.forEach(button => {
                     button.classList.remove("active-profile-tab");
