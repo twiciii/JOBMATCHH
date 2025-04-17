@@ -49,10 +49,11 @@
         position: absolute;
         top: 100px; /* Adjust as needed */
         right: 20px; /* Adjust as needed */
-        background-color: white;
+        background-color: #feffe9;
         border: 1px solid #ccc;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         display: none;
+        width: 20rem;
         z-index: 1000;
       }
 
@@ -75,13 +76,17 @@
       <header class="nav-container">
         <nav class="nav-bar flex--horizontal">
           <div class="logo-container flex--horizontal flex--gap-small">
-            <img class="site-logo" src="/images/JOB MATCH .png" alt="site logo" />
+            <img
+              class="site-logo"
+              src="/images/JOB MATCH .png"
+              alt="site logo"
+            />
             <input type="search" />
           </div>
           <div class="profile-container flex--horizontal flex--gap-medium">
             <ion-icon class="btn-notif" name="notifications"></ion-icon>
             <img class="profile-img" src="img/profile.jpg" alt="user profile" />
-            <a href="/JobMatch_Final/employer-profile.html">User Name</a>
+            <a href="employer-profile.html">User Name</a>
             <div class="notification-dropdown">
               <div class="notification-item">Notification 1</div>
               <div class="notification-item">Notification 2</div>
@@ -115,6 +120,15 @@
                     name="chatbubble-ellipses"
                   ></ion-icon
                   ><span>Message</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="applicants"
+                  ><ion-icon class="side-icon" name="person-circle"></ion-icon
+                  ><span>Applicantion status</span></a
                 >
               </li>
               <li>
@@ -208,6 +222,25 @@
                 <ion-icon class="btn-image" name="image"></ion-icon>
                 <ion-icon class="btn-send" name="send"></ion-icon>
               </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container applicants-tab">
+          <div class="applicants-list">
+            <div class="applicants-item">
+              <div class="applicants-info">
+                <img src="img/profile.jpg" />
+                <div>
+                  <h2>Applicants Name</h2>
+                  <a href="#">View Applications</a>
+                </div>
+              </div>
+              <select>
+                <option value="">Set Status</option>
+                <option value="Under Review">Under Review</option>
+                <option value="Hired">Hired</option>
+                <option value="Rejected">Rejected</option>
+              </select>
             </div>
           </div>
         </main>

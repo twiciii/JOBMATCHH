@@ -770,8 +770,8 @@
 
 /* Application */
 .application-list {
-  display: flex;
-  justify-content: center;
+  margin: 5rem auto;
+  width: 60rem;
   max-height: 30rem;
   overflow-y: scroll;
 }

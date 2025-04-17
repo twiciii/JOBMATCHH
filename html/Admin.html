@@ -1,605 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin - Job Match</title>
-  <link rel="stylesheet" href="../css/Admin.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet"
-  />
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"
-  ></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style-employer.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+    <title>Home &mdash; JobMatch</title>
+    <style>
+      .message-tab,
+      .review-tab,
+      .job-seeker-tab,
+      .schedule-tab,
+      .bookmark-tab {
+        display: none;
+      }
 
-  <!-- Top Header -->
-  <div class="top-header">
-    <div class="header-left">
-      <img src="../images/logo1.png" alt="Logo 1" class="logo" />
-      <img src="../images/logo2.png" alt="Logo 2" class="logo" />
-      <img src="../images/JOB MATCH .png" alt="Job Match Logo" class="logo" />
-    </div>
-    <div class="header-right">
-      <img src="../images/adminlogo.png" alt="Admin Icon" class="admin-icon" />
-      <span class="admin-name">ADMIN</span>
-    </div>
-  </div>
+      .side-nav-item.active {
+        background-color: #e4ac1e;
+        font-weight: bold;
+      }
 
-  <div class="admin-container">
-    <!-- Sidebar -->
-    <aside class="admin-sidebar">
-      <div class="features-box">
-        <h3>Features</h3>
-        <button class="active" onclick="showSection('managePost', this)">
-          <ion-icon name="document-text-outline"alt="Manage Post Icon" class="btn-icon" ></ion-icon> Manage Post
-        </button>
-        <button onclick="showSection('manageAccount', this)">
-          <ion-icon name="person-circle-outline"alt="Manage Account Icon" class="btn-icon"></ion-icon> Manage Account
-        </button>
-        <button onclick="showSection('approveJobSeeker', this)">
-          <ion-icon name="checkmark-done-outline"alt="Approve Job Seeker Icon" class="btn-icon"></ion-icon>Approve Job Seeker Post
-        </button>
-        <button onclick="showSection('approveCompany', this)">
-          <ion-icon name="business-outline"alt="Approve Company Icon" class="btn-icon"></ion-icon>Approve Company Post
-        </button>
-        <br>
-        <button class="logout-btn">Log out</button>
+      .side-nav {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .side-nav.hidden {
+        opacity: 0;
+        transform: translateX(-100%);
+        display: none;
+      }
+
+      .notification-dropdown {
+        position: absolute;
+        top: 100px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        background-color: #feffe9;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: none;
+        width: 20rem;
+        z-index: 1000;
+      }
+
+      .notification-dropdown.show {
+        display: block;
+      }
+
+      .notification-item {
+        padding: 2rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .notification-item:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="nav-container">
+        <nav class="nav-bar flex--horizontal">
+          <div class="logo-container flex--horizontal flex--gap-small">
+            <img
+              class="site-logo"
+              src="/images/JOB MATCH .png"
+              alt="site logo"
+            />
+            <input type="search" />
+          </div>
+          <div class="profile-container flex--horizontal flex--gap-medium">
+            <ion-icon class="btn-notif" name="notifications"></ion-icon>
+            <img class="profile-img" src="img/profile.jpg" alt="user profile" />
+            <a href="employer-profile.html">User Name</a>
+            <div class="notification-dropdown">
+              <div class="notification-item">Notification 1</div>
+              <div class="notification-item">Notification 2</div>
+              <div class="notification-item">Notification 3</div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="content-container">
+        <aside class="side--nav-container">
+          <ion-icon class="sidebar-menu-icon" name="menu"></ion-icon>
+          <nav class="side-nav">
+            <ul class="side-nav-list flex--vertical">
+              <h2>Features</h2>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="home"
+                  ><ion-icon class="side-icon" name="home"></ion-icon
+                  ><span>Home</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="message"
+                  ><ion-icon
+                    class="side-icon"
+                    name="chatbubble-ellipses"
+                  ></ion-icon
+                  ><span>Message</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="applicants"
+                  ><ion-icon class="side-icon" name="person-circle"></ion-icon
+                  ><span>Applicants</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="job-seeker"
+                  ><ion-icon
+                    class="side-icon"
+                    name="file-tray-stacked"
+                  ></ion-icon
+                  ><span>Job Seeker</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="bookmark"
+                  ><ion-icon class="side-icon" name="bookmark"></ion-icon
+                  ><span>Bookmark</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="review"
+                  ><ion-icon class="side-icon" name="search-circle"></ion-icon
+                  ><span>Review Application</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="side-nav-item flex--horizontal"
+                  href="#"
+                  data-tab="schedule"
+                  ><ion-icon class="side-icon" name="calendar"></ion-icon
+                  ><span>Schedule Interview</span></a
+                >
+              </li>
+            </ul>
+            <button class="btn-logout">Logout</button>
+          </nav>
+        </aside>
+        <main class="main--content-container home-tab">
+          <div class="post-container">
+            <div class="create-post">
+              <button id="myBtn">Post a job or Content</button>
+            </div>
+            <div class="post-list">
+              <div class="post-item">
+                <h1>Company Name</h1>
+                <p>
+                  I’m a UI/UX Designer who’s passionate about turning ideas into
+                  clean, user-friendly designs. From wireframes to high-fidelity
+                  prototypes, I love crafting experiences that are both
+                  functional and visually engaging. Currently open to new
+                  opportunities—if you’re looking for someone who designs with
+                  users in mind, let’s connect!
+                </p>
+                <div class="action-container">
+                  <button><ion-icon name="heart"></ion-icon>Like</button>
+                  <button>
+                    <ion-icon name="chatbox-ellipses"></ion-icon>Comment
+                  </button>
+                  <button><ion-icon name="link"></ion-icon>Apply</button>
+                  <button><ion-icon name="bookmark"></ion-icon>Bookmark</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container message-tab">
+          <div class="message-container">
+            <div class="message-list">
+              <h2>Messages</h2>
+              <div class="message-list-item">
+                <img src="img/profile.jpg" alt="user profile" />
+                <p>User Name</p>
+              </div>
+            </div>
+            <div class="chatbox-container">
+              <div class="chat-profile">
+                <img src="img/profile.jpg" alt="user profile" />
+                <p>User Name</p>
+              </div>
+              <div class="chat-box"></div>
+              <div class="message-field">
+                <input type="text" placeholder="Enter your message here" />
+                <ion-icon class="btn-image" name="image"></ion-icon>
+                <ion-icon class="btn-send" name="send"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container applicants-tab">
+          <div class="applicants-list">
+            <div class="applicants-item">
+              <div class="applicants-info">
+                <img src="img/profile.jpg" />
+                <div>
+                  <h2>Applicants Name</h2>
+                  <a href="#">View Applications</a>
+                </div>
+              </div>
+              <select>
+                <option value="">Set Status</option>
+                <option value="Under Review">Under Review</option>
+                <option value="Hired">Hired</option>
+                <option value="Rejected">Rejected</option>
+              </select>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container job-seeker-tab">
+          <div class="job-post-list">
+            <div class="job-post-item">
+              <img src="img/profile.jpg" />
+              <div class="job-info">
+                <h2>User Name</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                <div class="status-container">
+                  <button>&nbsp;</button>
+                  <p>Status</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container bookmark-tab">
+          <div class="bookmark-container">
+            <h2 class="bookmark-title">Bookmark</h2>
+            <div class="bookmark-list">
+              <div class="bookmark-item">
+                <h2>User/Company Name</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quod, ex nam placeat similique commodi tenetur delectus
+                  libero.
+                </p>
+              </div>
+              <div class="btn-bookmark-container">
+                <button class="btn-view">View</button>
+                <button class="btn-remove-bk">Remove Bookmark</button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container review-tab">
+          <div class="review-container">
+            <h2 class="review-title">Review Application</h2>
+            <div class="review-list">
+              <div class="review-items">
+                <div class="review-content">
+                  <h2>User Name</h2>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
+                    vero corporis quisquam a odit
+                  </p>
+                </div>
+                <div class="review-actions">
+                  <button>VIEW</button>
+                  <button>APPROVED</button>
+                  <button>REJECT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main class="main--content-container schedule-tab">
+          <div class="schedule-container">
+            <h2 class="schedule-title">Schedule Interview</h2>
+            <div class="schedule-list">
+              <div class="schedule-items">
+                <div class="schedule-content">
+                  <h2>User Name</h2>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
+                    vero corporis quisquam a odit
+                  </p>
+                </div>
+                <div class="schedule-actions">
+                  <input type="date" />
+                  <input type="time" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
-    </aside>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="create-post-container">
+          <h2>Create a post</h2>
+          <textarea rows="10" placeholder="What's on your mind?"></textarea>
+          <input type="file" />
+          <button>Post Now</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarLinks = document.querySelectorAll(".side-nav-item");
+        const contentTabs = document.querySelectorAll(
+          ".main--content-container"
+        );
 
-    <!-- Main Content -->
-    <main class="admin-content">
-      <!-- Manage Post Section -->
-      <section id="managePost" class="section active">
-        <table class="post-table">
-          <tr>
-            <td><strong>Jen Cabutin</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Makati City</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
+        function showTab(tabName) {
+          contentTabs.forEach((tab) => {
+            tab.style.display = "none";
+            if (tab.classList.contains(tabName + "-tab")) {
+              tab.style.display = "block";
+            }
+          });
 
-        <table class="post-table">
-          <tr>
-            <td><strong>Jhayron Lumague</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Makati City</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
+          sidebarLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.dataset.tab === tabName) {
+              link.classList.add("active");
+            }
+          });
+        }
 
-        <table class="post-table">
-          <tr>
-            <td><strong>Tracy Veloria</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Makati City</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
+        sidebarLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const tab = this.dataset.tab;
+            if (tab) {
+              showTab(tab);
+            }
+          });
+        });
 
-        <table class="post-table">
-          <tr>
-            <td><strong>Dominiq Matias</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Makati City</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
+        showTab("home");
 
-        <table class="post-table">
-          <tr>
-            <td><strong>Marc Malapot</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>UI/UX Programmer</td>
-                  <td>Quezon City</td>
-                  <td>1 Year Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
+        const menuIcon = document.querySelector(".sidebar-menu-icon");
+        const sideNav = document.querySelector(".side-nav");
+        const sideNavDisplayStyle = window.getComputedStyle(sideNav).display;
 
-        <!--Table-->
-        <table class="post-table">
-          <tr>
-            <td><strong>Ysa Zimon</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Frontend Developer</td>
-                  <td>Manila City</td>
-                  <td>3 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-        
-      </section>
+        menuIcon.addEventListener("click", () => {
+          sideNav.classList.toggle("hidden");
+          if (!sideNav.classList.contains("hidden")) {
+            sideNav.style.display = sideNavDisplayStyle;
+          } else {
+            setTimeout(() => {
+              sideNav.style.display = "none";
+            }, 300);
+          }
+        });
 
-      <!-- Manage Account Section -->
-      <section id="manageAccount" class="section">
-        <div class="manage-container">
-          <table class="post-table">
-            <tr>
-              <td><strong>Coleen Cabalayan</strong></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <table class="info-table">
-                  <tr>
-                    <td>Software Developer</td>
-                    <td>Caloocan City</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="button-gg">
-                <button class="approve-btn">Approve</button>
-                <button class="decline-btn">Decline</button>
-              </td>
-            </tr>
-          </table>
+        const notificationIcon = document.querySelector(".btn-notif");
+        const notificationDropdown = document.querySelector(
+          ".notification-dropdown"
+        );
 
-          <table class="post-table">
-            <tr>
-              <td><strong>Cole Cabalay</strong></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <table class="info-table">
-                  <tr>
-                    <td>Software Developer</td>
-                    <td>Valenzuela City</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="button-gg">
-                <button class="approve-btn">Approve</button>
-                <button class="decline-btn">Decline</button>
-              </td>
-            </tr>
-          </table>
+        notificationIcon.addEventListener("click", () => {
+          notificationDropdown.classList.toggle("show");
+        });
 
-          <table class="post-table">
-            <tr>
-              <td><strong>Marc Lumague</strong></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <table class="info-table">
-                  <tr>
-                    <td>Software Developer</td>
-                    <td>Mandaluyong City</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="button-gg">
-                <button class="approve-btn">Approve</button>
-                <button class="decline-btn">Decline</button>
-              </td>
-            </tr>
-          </table>
-
-          <table class="post-table">
-            <tr>
-              <td><strong>Tracy Matias</strong></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <table class="info-table">
-                  <tr>
-                    <td>Software Developer</td>
-                    <td>Pasig City</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="button-gg">
-                <button class="approve-btn">Approve</button>
-                <button class="decline-btn">Decline</button>
-              </td>
-            </tr>
-          </table>
-
-          <table class="post-table">
-            <tr>
-              <td><strong>Colene Cabaylan</strong></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <table class="info-table">
-                  <tr>
-                    <td>Software Developer</td>
-                    <td>Makati City</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="button-gg">
-                <button class="approve-btn">Approve</button>
-                <button class="decline-btn">Decline</button>
-              </td>
-            </tr>
-          </table>
-      </section>
-
-      <!-- Approve Job Seeker Post -->
-      <section id="approveJobSeeker" class="section">
-        <table class="post-table">
-          <tr>
-            <td><strong>Jen Cabutin</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Makati City</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>Matias jr.</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Malabon City</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>Coleen Mae Cablayan</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Mandaluyong City</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>Ysa Simon</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Bulacan</td>
-                  <td>2 Years Experience</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>Marc Keneth Malapo</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Makati City</td>
-                  <td>Looking for IT Related Jobs</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>Ysa Cymon</strong></td>
-            <td class="post-time">5h ago</td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Developer</td>
-                  <td>Makati City</td>
-                  <td>Looking for Manila Based Onsite Work</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-      </section>
-
-      <!-- Approve Company Post -->
-      <section id="approveCompany" class="section">
-        <table class="post-table">
-          <tr>
-            <td><strong>BCD Company</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Customer Service & Business Solutions</td>
-                  <td>Makati City</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>Concentrix</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Development Company</td>
-                  <td>Quezon City</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>Teleperformance</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Development Company</td>
-                  <td>Manila City</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>EFD Company</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Development Company</td>
-                  <td>Manila City</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>ABC Company</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Development Company</td>
-                  <td>Valenzuela City</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-
-        <table class="post-table">
-          <tr>
-            <td><strong>WXY Company</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table class="info-table">
-                <tr>
-                  <td>Web Development Company</td>
-                  <td>Caloocan City</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="button-gg">
-              <button class="approve-btn">Approve</button>
-              <button class="delete-btn">Delete Post</button>
-            </td>
-          </tr>
-        </table>
-      </section>
-    </main>
-  </div>
-
-  <script src="../js/Admin.js"></script>
-</body>
+        document.addEventListener("click", (event) => {
+          if (
+            !notificationIcon.contains(event.target) &&
+            !notificationDropdown.contains(event.target)
+          ) {
+            notificationDropdown.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

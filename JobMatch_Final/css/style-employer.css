@@ -122,8 +122,6 @@
 .create-post {
   background-color: #003366;
   padding: 0.5rem 1rem;
-  width: 70%;
-  margin: 0 auto;
 }
 
 .create-post button {
@@ -143,8 +141,6 @@
   max-height: 60rem;
   padding: 1rem 1rem;
   overflow-y: scroll;
-  max-width: 100rem;
-  margin: 0 auto;
 }
 
 .post-item {
@@ -668,8 +664,8 @@
 }
 
 .applicants-list {
-  max-width: 60rem;
-  margin: 0 auto;
+  max-width: 90rem;
+  margin: 5rem auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
