@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   background-color: #003366;
   height: 100vh;
@@ -65,7 +70,6 @@
 .side-nav {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 15rem;
   background-color: #feffe9;
   padding: 2rem 4rem;
 }
@@ -116,25 +120,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 2rem 4rem;
-  margin: 8rem 0;
+  padding: 1rem 2rem;
+  margin: 7rem 0;
 }
 
-.create-post {
-  background-color: #003366;
-  padding: 0.5rem 1rem;
-}
-
-.create-post button {
-  height: 5rem;
-  width: 100%;
-  border-radius: 1rem;
-  border: none;
-  text-align: left;
-  padding: 0 1rem;
-  background-color: #fff;
-  color: #999;
-}
 .post-list {
   display: flex;
   flex-direction: column;
@@ -176,40 +165,43 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  padding: 2rem 4rem;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  overflow-y: scroll;
 }
 
 .job-post-item {
   display: flex;
   align-items: center;
-  gap: 2rem;
   background-color: #dedbd5;
   width: 80%;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
 }
 
 .job-post-item img {
-  height: 8rem;
-  width: 8rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
 }
 
 .job-post-item h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .job-post-item p {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 .status-container {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .status-container p {
-  font-size: 2rem;
+  font-size: 1.5rem !important;
 }
 
 .status-container button {
@@ -224,31 +216,32 @@
 .company-post-list {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1rem;
   justify-items: center;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
+  overflow-y: scroll;
 }
 
 .company-post-item {
   display: flex;
   align-items: center;
-  gap: 2rem;
   background-color: #dedbd5;
   width: 80%;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
 }
 
 .company-post-item img {
-  height: 8rem;
-  width: 8rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
 }
 
 .company-post-item h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .company-post-item p {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 .status-container {

@@ -122,6 +122,8 @@
 .create-post {
   background-color: #003366;
   padding: 0.5rem 1rem;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .create-post button {
@@ -271,6 +273,7 @@
 .btn-image {
   height: 4rem;
   width: 4rem;
+  cursor: pointer;
 }
 
 /*Add friend*/

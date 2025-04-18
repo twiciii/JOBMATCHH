@@ -309,5 +309,36 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const imageIcon = document.querySelector(".btn-image");
+
+  if (imageIcon) {
+    // Create a hidden file input
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "image/*";
+    fileInput.style.display = "none";
+
+    // Append it to the body
+    document.body.appendChild(fileInput);
+
+    // Trigger the file input when icon is clicked
+    imageIcon.addEventListener("click", () => {
+      fileInput.click();
+    });
+
+    // Optional: Handle file selection
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+      if (file) {
+        console.log("Selected file:", file.name);
+        // Handle file logic here
+      }
+    });
+  }
+});
+
+    </script>
   </body>
 </html>

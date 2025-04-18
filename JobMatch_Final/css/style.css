@@ -275,6 +275,7 @@
 .btn-image {
   height: 4rem;
   width: 4rem;
+  cursor: pointer;
 }
 
 /* Friends container */
