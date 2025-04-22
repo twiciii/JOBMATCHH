@@ -232,15 +232,25 @@
                 <img src="img/profile.jpg" />
                 <div>
                   <h2>Applicants Name</h2>
-                  <a href="#">View Applications</a>
+                  <a href="#">View Resume</a>
                 </div>
               </div>
-              <select>
+              <select id="statusSelect">
                 <option value="">Set Status</option>
+                <option value="Applied">Applied</option>
                 <option value="Under Review">Under Review</option>
+                <option value="shortlisted">Shortlisted</option>
+                <option value="For Interview">For Interview</option>
+                <option value="Interviewed">Interviewed</option>
                 <option value="Hired">Hired</option>
                 <option value="Rejected">Rejected</option>
+                <option value="On Hold">On Hold</option>
+                <option value="Withdrawn">Withdrawn</option>
               </select>
+              <div id="scheduleActions" class="schedule-actions">
+                <input type="date" id="interviewDate" />
+                <input type="time" id="interviewTime" />
+              </div>
             </div>
           </div>
         </main>
@@ -311,7 +321,7 @@
                     vero corporis quisquam a odit
                   </p>
                 </div>
-                <div class="schedule-actions">
+                <div class="schedulee-actions">
                   <input type="date" />
                   <input type="time" />
                 </div>
@@ -428,6 +438,18 @@
     });
   }
 });
+const statusSelect = document.getElementById('statusSelect');
+    const scheduleActions = document.getElementById('scheduleActions');
+
+    // Add event listener to the dropdown
+    statusSelect.addEventListener('change', function() {
+      // Check if "For Interview" is selected
+      if (this.value === 'For Interview') {
+        scheduleActions.style.display = 'block'; // Show schedule actions
+      } else {
+        scheduleActions.style.display = 'none'; // Hide schedule actions
+      }
+    });
     </script>
   </body>
 </html>

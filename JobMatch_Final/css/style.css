@@ -353,6 +353,14 @@
   background-color: red;
 }
 
+.btn-accept:hover{
+  background-color: #004992;
+  cursor: pointer;
+}
+.btn-remove:hover{
+  background-color: rgb(206, 1, 1);
+  cursor: pointer;
+}
 .friend-profile img {
   height: 5rem;
   width: 5rem;
@@ -577,6 +585,16 @@
   border-radius: 1rem;
 }
 
+.btn-view:hover{
+  background-color: #00468b;
+  cursor: pointer;
+}
+
+.btn-remove-bk:hover{
+  background-color: rgb(216, 3, 3);
+  cursor: pointer;
+}
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -772,8 +790,8 @@
 /* Application */
 .application-list {
   margin: 5rem auto;
-  width: 60rem;
-  max-height: 30rem;
+  width: 80rem;
+  max-height: 40rem;
   overflow-y: scroll;
 }
 
@@ -804,10 +822,13 @@
 }
 
 .job-status hr {
-  width: 15rem;
+  width: 10rem;
   border: 0.5px solid #000;
 }
 
+.job-status p{
+  font-size: small;
+}
 .status-item {
   display: flex;
   flex-direction: column;
@@ -822,6 +843,29 @@
   color: #fff;
 }
 
-.other-status {
+.other-status{
   background-color: #dedbd5;
+  margin-top: 10px;
+}
+.description{
+  font-size: medium;
+  color: white;
+  margin-left: 11px;
+}
+
+.cancel-application{
+  margin-left:570px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 18rem;
+  background-color: #003366;
+  color: #fff;
+  border-radius: 12px;
+  font-size: medium;
+  border: none;
+}
+
+.cancel-application:hover{
+  background-color: #004992;
+  cursor: pointer;
 }
