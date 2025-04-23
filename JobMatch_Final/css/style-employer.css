@@ -698,6 +698,7 @@
   gap: 1rem;
   max-height: 30rem;
   overflow-y: scroll;
+  padding-right: 15px;
 }
 
 .applicants-info {
@@ -711,7 +712,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #dedbd5;
+  background-color: #feffe9;
   padding: 1rem 2rem;
   border-radius: 1rem;
 }

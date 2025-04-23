@@ -793,12 +793,14 @@
   width: 80rem;
   max-height: 40rem;
   overflow-y: scroll;
+  padding-right: 15px
 }
 
 .application-item {
-  background-color: #dedbd5;
+  background-color: #feffe9;
   padding: 1rem 2rem;
   border-radius: 1rem;
+  margin-bottom: 2rem;
 }
 
 .job-status {
@@ -853,8 +855,16 @@
   margin-left: 11px;
 }
 
+.application-description {
+  margin-top: 1.5rem;
+  font-size: small;
+  font: 500;
+  color: #000000;
+  padding: 0.5rem 0;
+}
+
 .cancel-application{
-  margin-left:570px;
+  margin-left:555px;
   margin-top: 20px;
   padding: 10px;
   width: 18rem;
